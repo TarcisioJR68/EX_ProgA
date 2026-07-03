@@ -14,11 +14,8 @@
 #usando compreensão
 
 def achatar(lista):
-    return [
-        
-    ]
+    return [n for n in lista if isinstance(n, int)] + [n for l in lista if isinstance(l, list) for n in achatar(l)]
     
 
 lista = [1, 2, [4, 2], 5, [2, [1, 2, 3], [[1]]], 8]
 print(achatar(lista))
-
